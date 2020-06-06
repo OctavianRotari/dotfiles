@@ -396,6 +396,8 @@ call plug#begin('~/.config/nvim/plugged')
         let NERDTreeDirArrowExpandable = "\u00a0" " make arrows invisible
         let NERDTreeDirArrowCollapsible = "\u00a0" " make arrows invisible
         let NERDTreeNodeDelimiter = "\u263a" " smiley face
+        set encoding=utf8
+        set guifont=DroidSansMono\ Nerd\ Font:h11
 
         augroup nerdtree
             autocmd!
@@ -483,7 +485,7 @@ call plug#begin('~/.config/nvim/plugged')
         command! -bang -nargs=? -complete=dir GitFiles
             \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview('right:50%', '?'), <bang>0)
     " }}}
-
+    "
     " vim-fugitive {{{
         Plug 'tpope/vim-fugitive'
         nmap <silent> <leader>gs :Gstatus<cr>
